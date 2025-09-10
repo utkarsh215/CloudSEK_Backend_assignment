@@ -4,7 +4,8 @@
 A Node.js (Express) backend with JWT authentication that allows users to create posts and add text comments. MongoDB is used for storage. Optional rich text field is supported on comments.
 
 ## High Level Architecture
-<img width="913" height="625" alt="image" src="https://github.com/user-attachments/assets/228bd511-3991-4401-97c1-a877e83f7c53" />
+<img width="921" height="613" alt="image" src="https://github.com/user-attachments/assets/3bb75f72-44e7-46f9-bb6c-c57bd67ff2fe" />
+
 
 
 ## Why MongoDB
