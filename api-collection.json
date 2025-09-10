@@ -1,0 +1,142 @@
+{
+	"client": "Thunder Client",
+	"collectionName": "CloudSek Posts & Comments API",
+	"dateExported": "2025-09-10T00:00:00.000Z",
+	"version": "1.1",
+	"folders": [],
+	"requests": [
+		{
+			"name": "Auth - Register",
+			"method": "POST",
+			"url": "{{baseUrl}}/api/auth/register",
+			"headers": [
+				{ "name": "Content-Type", "value": "application/json" }
+			],
+			"body": {
+				"type": "json",
+				"raw": "{\n  \"username\": \"alice\",\n  \"email\": \"alice@example.com\",\n  \"password\": \"Password123!\"\n}"
+			}
+		},
+		{
+			"name": "Auth - Login",
+			"method": "POST",
+			"url": "{{baseUrl}}/api/auth/login",
+			"headers": [
+				{ "name": "Content-Type", "value": "application/json" }
+			],
+			"body": {
+				"type": "json",
+				"raw": "{\n  \"email\": \"alice@example.com\",\n  \"password\": \"Password123!\"\n}"
+			}
+		},
+		{
+			"name": "Auth - Protected Ping",
+			"method": "GET",
+			"url": "{{baseUrl}}/api/protected",
+			"headers": [
+				{ "name": "x-auth-token", "value": "{{token}}" }
+			]
+		},
+		{
+			"name": "Posts - Create",
+			"method": "POST",
+			"url": "{{baseUrl}}/api/posts",
+			"headers": [
+				{ "name": "Content-Type", "value": "application/json" },
+				{ "name": "x-auth-token", "value": "{{token}}" }
+			],
+			"body": {
+				"type": "json",
+				"raw": "{\n  \"title\": \"First Post\",\n  \"content\": \"Hello world content\"\n}"
+			}
+		},
+		{
+			"name": "Posts - List",
+			"method": "GET",
+			"url": "{{baseUrl}}/api/posts?skip=0&limit=20"
+		},
+		{
+			"name": "Posts - Get By Id",
+			"method": "GET",
+			"url": "{{baseUrl}}/api/posts/{{postId}}"
+		},
+		{
+			"name": "Posts - Update",
+			"method": "PUT",
+			"url": "{{baseUrl}}/api/posts/{{postId}}",
+			"headers": [
+				{ "name": "Content-Type", "value": "application/json" },
+				{ "name": "x-auth-token", "value": "{{token}}" }
+			],
+			"body": {
+				"type": "json",
+				"raw": "{\n  \"title\": \"Updated Title\",\n  \"content\": \"Updated content\"\n}"
+			}
+		},
+		{
+			"name": "Posts - Delete",
+			"method": "DELETE",
+			"url": "{{baseUrl}}/api/posts/{{postId}}",
+			"headers": [
+				{ "name": "x-auth-token", "value": "{{token}}" }
+			]
+		},
+		{
+			"name": "Comments - Create on Post",
+			"method": "POST",
+			"url": "{{baseUrl}}/api/{{postId}}/comments",
+			"headers": [
+				{ "name": "Content-Type", "value": "application/json" },
+				{ "name": "x-auth-token", "value": "{{token}}" }
+			],
+			"body": {
+				"type": "json",
+				"raw": "{\n  \"text\": \"Nice post!\",\n  \"richText\": null\n}"
+			}
+		},
+		{
+			"name": "Comments - List for Post (top-level)",
+			"method": "GET",
+			"url": "{{baseUrl}}/api/{{postId}}/comments?skip=0&limit=50"
+		},
+		{
+			"name": "Replies - Create reply to Comment",
+			"method": "POST",
+			"url": "{{baseUrl}}/api/comments/{{commentId}}/replies",
+			"headers": [
+				{ "name": "Content-Type", "value": "application/json" },
+				{ "name": "x-auth-token", "value": "{{token}}" }
+			],
+			"body": {
+				"type": "json",
+				"raw": "{\n  \"text\": \"Thanks!\",\n  \"richText\": null\n}"
+			}
+		},
+		{
+			"name": "Replies - List for Comment",
+			"method": "GET",
+			"url": "{{baseUrl}}/api/comments/{{commentId}}/replies?skip=0&limit=50"
+		},
+		{
+			"name": "Comments - Update",
+			"method": "PUT",
+			"url": "{{baseUrl}}/api/comments/{{commentId}}",
+			"headers": [
+				{ "name": "Content-Type", "value": "application/json" },
+				{ "name": "x-auth-token", "value": "{{token}}" }
+			],
+			"body": {
+				"type": "json",
+				"raw": "{\n  \"text\": \"Edited comment\",\n  \"richText\": null\n}"
+			}
+		},
+		{
+			"name": "Comments - Delete",
+			"method": "DELETE",
+			"url": "{{baseUrl}}/api/comments/{{commentId}}",
+			"headers": [
+				{ "name": "x-auth-token", "value": "{{token}}" }
+			]
+		}
+	]
+} 
