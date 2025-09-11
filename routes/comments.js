@@ -3,6 +3,7 @@ import auth from '../middleware/auth.js';
 import Comment from '../models/comments.js';
 import Post from '../models/posts.js';
 
+
 const router = express.Router({ mergeParams: true });
 
 // Create comment on a post
