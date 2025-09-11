@@ -3,9 +3,14 @@
 ## Overview
 A Node.js (Express) backend with JWT authentication that allows users to create posts and add text comments. MongoDB is used for storage. Optional rich text field is supported on comments.
 
+## Loom Demo video link
+https://www.loom.com/share/1d80113714ef44ed968ee7e061442f3b?sid=29de0910-da42-43fd-b371-6931eacebf81
+
 ## High Level Architecture
 <img width="921" height="613" alt="image" src="https://github.com/user-attachments/assets/3bb75f72-44e7-46f9-bb6c-c57bd67ff2fe" />
 
+## Render Backend BaseURL
+https://cloudsek-backend-assignment.onrender.com/
 
 
 ## Why MongoDB

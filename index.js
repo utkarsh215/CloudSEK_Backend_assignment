@@ -17,7 +17,7 @@ const PORT = process.env.PORT;
 
 
 app.get("/", (req, res) => {
-    res.send("Hello World");
+    res.send("Post-Comment api base url");
 });
 
 app.get('/api/protected', auth, (req, res) => {
