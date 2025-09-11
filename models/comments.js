@@ -7,6 +7,7 @@ class Comment {
 		this.authorId = new ObjectId(authorId);
 		this.text = text; // plain text
 		this.richText = richText; // optional rich text (JSON or HTML)
+		
 		this.parentCommentId = parentCommentId ? new ObjectId(parentCommentId) : null;
 		this.createdAt = new Date();
 		this.updatedAt = new Date();
