@@ -4,7 +4,7 @@
 A Node.js (Express) backend with JWT authentication that allows users to create posts and add text comments. MongoDB is used for storage. Optional rich text field is supported on comments.
 
 ## Note for the BONUS Feature:
-I have implemented the support for adding rich text in comments. At present, formatting is stored in markdown-style syntax (e.g., **bold** for bold text, *italic* for italics and [link] for any addd hyperlink). This ensures flexibility for the frontend to render styled text as needed. The backend correctly stores and retrieves this format.
+I have implemented the support for adding rich text in comments. At present, formatting is stored in markdown-style syntax (e.g., **bold** for bold text, *italic* for italics and [link] for any added hyperlink). This ensures flexibility for the frontend to render styled text as needed. The backend correctly stores and retrieves this format.
 
 
 ## Loom Demo video link
@@ -29,13 +29,13 @@ https://cloudsek-backend-assignment.onrender.com/
 
 ## Setup
 1. Prerequisites: Node 20+, MongoDB instance/URI
-2. Environment variables (create `.env` in `Backend/`):
+2. Environment variables (create `.env`):
 ```
 PORT=3000
 MONGO_URI=mongodb+srv://<user>:<pass>@<cluster>/<db>?retryWrites=true&w=majority
 JWT_SECRET=super_secret_value
 ```
-3. Install and run (from `Backend/`):
+3. Install and run:
 ```
 npm install
 node index.js
